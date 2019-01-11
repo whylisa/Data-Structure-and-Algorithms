@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function insertionSort(arr) {
+				var len = arr.length
+				var preindex,current;
+				for (var i = 1;i < len; i++)
+				{
+					preindex = i-1
+					current = arr[i]
+					while (preindex >=0 && arr[preindex] > current)
+					{
+						arr[preindex+1] = arr[preindex]
+						preindex--
+					}
+					arr[preindex+1] = current
+				}
+				return arr
+			}
+			console.log(insertionSort([1,4,8,3,5]))
+		</script>
+	</body>
+</html>
